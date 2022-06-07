@@ -40,3 +40,10 @@ void prime()
         cout << num << " is a prime number.";
     }
 }
+
+
+// In the above program, prime() is called from the main() with no arguments.
+
+// prime() takes the positive number from the user and checks whether the number is a prime number or not.
+
+// Since, return type of prime() is void, no value is returned from the function.
