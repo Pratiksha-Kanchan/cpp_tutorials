@@ -55,3 +55,31 @@ class PrivateDerived: private Base {
   // y is private
   // z is not accessible from PrivateDerived
 };
+
+
+
+
+
+
+C++ Function Overriding
+
+As we know, inheritance is a feature of OOP that allows us to create derived classes from a base class. The derived classes inherit features of the base class.
+
+Suppose, the same function is defined in both the derived class and the based class. Now if we call this function using the object of the derived class, the function of the derived class is executed.
+
+This is known as function overriding in C++. The function in derived class overrides the function in base class.
+
+![image](https://user-images.githubusercontent.com/84810132/172990828-45cc0a0e-9376-4ee3-b3ab-ccfb6a620153.png)
+
+
+Access Overridden Function in C++
+
+Access overridden function using object of derived class in C++
+![image](https://user-images.githubusercontent.com/84810132/172990891-7c55ac7f-2c87-405b-8cf1-0b8c7ffdd327.png)
+
+
+Access overridden function inside derived class in C++
+![image](https://user-images.githubusercontent.com/84810132/172990984-4df2e35c-c467-45ad-9503-45a904e82dc8.png)
+
+
+
