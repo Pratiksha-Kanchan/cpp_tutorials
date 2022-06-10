@@ -242,3 +242,104 @@ void print(Animal* ani) {
 }
 
 This will make the code shorter, cleaner, and less repetitive.
+
+
+
+C++ Class Templates
+
+In this tutorial, we will learn about class templates in C++ with the help of examples.
+
+Templates are powerful features of C++ which allows us to write generic programs. There are two ways we can implement templates:
+
+    Function Templates
+    Class Templates
+
+Similar to function templates, we can use class templates to create a single class to work with different data types.
+
+Class templates come in handy as they can make our code shorter and more manageable.
+Class Template Declaration
+
+A class template starts with the keyword template followed by template parameter(s) inside <> which is followed by the class declaration.
+
+template <class T>
+class className {
+  private:
+    T var;
+    ... .. ...
+  public:
+    T functionName(T arg);
+    ... .. ...
+};
+
+In the above declaration, T is the template argument which is a placeholder for the data type used, and class is a keyword.
+
+Inside the class body, a member variable var and a member function functionName() are both of type T.
+Creating a Class Template Object
+
+Once we've declared and defined a class template, we can create its objects in other classes or functions (such as the main() function) with the following syntax
+
+className<dataType> classObject;
+
+For example,
+
+className<int> classObject;
+className<float> classObject;
+className<string> classObject;
+    
+
+
+    
+Defining a Class Member Outside the Class Template
+
+Suppose we need to define a function outside of the class template. We can do this with the following code:
+
+template <class T>
+class ClassName {
+    ... .. ...
+    // Function prototype
+    returnType functionName();
+};
+
+// Function definition
+template <class T>
+returnType ClassName<T>::functionName() {
+    // code
+}
+
+Notice that the code template <class T> is repeated while defining the function outside of the class. This is necessary and is part of the syntax.
+
+If we look at the code in Example 1, we have a function getNum() that is defined inside the class template Number.
+
+We can define getNum() outside of Number with the following code:
+
+template <class T>
+class Number {
+    ... .. ...
+    // Function prototype
+    T getnum();
+};
+
+// Function definition
+template <class T>
+T Number<T>::getNum() {
+    return num;
+}
+    
+
+    
+    
+    
+C++ Class Templates With Multiple Parameters
+
+In C++, we can use multiple template parameters and even use default arguments for those parameters. For example,
+
+template <class T, class U, class V = int>
+class ClassName {
+  private:
+    T member1;
+    U member2;
+    V member3;
+    ... .. ...
+  public:
+    ... .. ...
+};
